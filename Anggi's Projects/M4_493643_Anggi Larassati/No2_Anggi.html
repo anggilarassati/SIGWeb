@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No2_Validasi Input</title>
+</head>
+<body>
+    <h2>Validasi Input</h2>
+    <p><em>Dibuat oleh: Anggi Larassati (22/493643/TK/54089)</em></p>
+    <p>Masukkan nama, password dan alamat email anda:</p>
+
+    <form onsubmit="return validasiPassword()">
+        Nama: <input type="text" id="nama"><br>
+        Password: <input type="password" id="password"><br>
+        E-mail: <input type="email" id="email"><br>
+        <input type="submit" value="Klik">
+    </form>
+
+    <script>
+        function validasiPassword() {
+            let password = document.getElementById("password").value;
+
+            if (password !== "sss") {
+                alert("password salah");
+                return false; // Mencegah form terkirim jika password salah
+            } else {
+                alert("Login berhasil!");
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No5_Hitung Bilangan Fibonacci</title>
+</head>
+<body>
+    <h2>Bilangan Fibonacci</h2>
+    <p><em>Dibuat oleh: Anggi Larassati (22/493643/TK/54089)</em></p>
+    <p>Masukkan sebuah angka untuk menampilkan bilangan Fibonacci hingga angka tersebut:</p>
+    <form onsubmit="return hitungFibonacci(event)">
+        <input type="number" id="angka" min="1" required>
+        <input type="submit" value="Hitung">
+    </form>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungFibonacci(event) {
+            event.preventDefault(); // Mencegah halaman reload
+
+            let angka = parseInt(document.getElementById("angka").value);
+            let hasil = document.getElementById("hasil");
+            let fibonacci = [0, 1];
+
+            // Menghitung bilangan Fibonacci sampai nilai tertentu
+            for (let i = 2; fibonacci[i - 1] + fibonacci[i - 2] <= angka; i++) {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            }
+
+            hasil.innerHTML = "Bilangan Fibonacci: " + fibonacci.join(", ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No4_Hitung Bilangan Prima</title>
+</head>
+<body>
+    <h2>Bilangan Prima</h2>
+    <p><em>Dibuat oleh: Anggi Larassati (22/493643/TK/54089)</em></p>
+    <p>Masukkan sebuah angka untuk menampilkan bilangan prima dari 1 hingga angka tersebut:</p>
+    <form onsubmit="return hitungPrima(event)">
+        <input type="number" id="angka" min="1" required>
+        <input type="submit" value="Hitung">
+    </form>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungPrima(event) {
+            event.preventDefault(); // Mencegah halaman reload
+            
+            let angka = parseInt(document.getElementById("angka").value);
+            let hasil = document.getElementById("hasil");
+            let bilanganPrima = [];
+
+            function isPrima(num) {
+                if (num < 2) return false;
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) return false;
+                }
+                return true;
+            }
+
+            for (let i = 1; i <= angka; i++) {
+                if (isPrima(i)) {
+                    bilanganPrima.push(i);
+                }
+            }
+
+            hasil.innerHTML = "Bilangan prima: " + (bilanganPrima.length ? bilanganPrima.join(", ") : "Tidak ada");
+        }
+    </script>
+</body>
+</html>

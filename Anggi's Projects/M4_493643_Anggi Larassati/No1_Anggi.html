@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No1_Hitung Faktorial</title>
+</head>
+<body>
+    <h2>Hitung faktorial dari input</h2>
+    <p><em>Dibuat oleh: Anggi Larassati (22/493643/TK/54089)</em></p>
+    <p>Masukkan sembarang angka</p>
+    <input type="number" id="inputFaktorial" placeholder="Masukkan angka">
+    <button onclick="hitungFaktorial()">click</button>
+    <p id="hasilFaktorial"></p>
+
+    <script>
+        function hitungFaktorial() {
+            let angka = parseInt(document.getElementById("inputFaktorial").value);
+            if (isNaN(angka) || angka < 0) {
+                document.getElementById("hasilFaktorial").innerText = "Masukkan angka positif!";
+                return;
+            }
+
+            let hasil = 1;
+            for (let i = angka; i > 1; i--) {
+                hasil *= i;
+            }
+
+            document.getElementById("hasilFaktorial").innerText = `angka faktorial dari ${angka} adalah: ${hasil}`;
+        }
+    </script>
+
+</body>
+</html>

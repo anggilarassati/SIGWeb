@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Gallery</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            border: 1px solid blue;
+            background-color: white;
+        }
+        .header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin: 10px 0;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            display: block;
+            padding: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .text {
+            width: 60%;
+        }
+        .image-container {
+            width: 40%;
+            text-align: right;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">City Gallery</div>
+        <div class="content">
+            <div class="sidebar">
+                <ul id="city-list">
+                    <li><a href="#" data-city="Yogyakarta">Yogyakarta</a></li>
+                    <li><a href="#" data-city="Bandung">Bandung</a></li>
+                    <li><a href="#" data-city="Jakarta">Jakarta</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="text">
+                    <h2 id="city-title">Yogyakarta</h2>
+                    <p id="city-description">
+                        Yogyakarta, atau Jogja, adalah kota istimewa yang kaya budaya, sejarah, dan wisata.
+                        Dikenal sebagai pusat pendidikan dan kuliner khas seperti gudeg, kota ini memiliki daya tarik unik bagi wisatawan.
+                    </p>
+                    <p id="city-history">
+                        Tugu Jogja adalah ikon bersejarah yang dibangun pada 1755 oleh Sultan Hamengkubuwono I. 
+                        Selain sebagai simbol kota, tugu ini menjadi spot favorit untuk berfoto, terutama saat malam hari.
+                    </p>
+                </div>
+                <div class="image-container">
+                    <img id="city-image" src="Yogyakarta.webp" alt="Yogyakarta">
+                </div>
+            </div>
+        </div>
+        <div class="footer">Copyright @Anggi Larassati (22/493643/TK/54089)</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cityData = {
+                "Yogyakarta": {
+                    title: "Yogyakarta",
+                    description: "Yogyakarta, atau Jogja, adalah kota istimewa yang kaya budaya, sejarah, dan wisata. Dikenal sebagai pusat pendidikan dan kuliner khas seperti gudeg, kota ini memiliki daya tarik unik bagi wisatawan.",
+                    history: "Tugu Jogja adalah ikon bersejarah yang dibangun pada 1755 oleh Sultan Hamengkubuwono I. Selain sebagai simbol kota, tugu ini menjadi spot favorit untuk berfoto, terutama saat malam hari.",
+                    image: "Yogyakarta.webp"
+                },
+                "Bandung": {
+                    title: "Bandung",
+                    description: "Gedung Sate, ikon Bandung yang dibangun pada 1920, memiliki arsitektur khas dengan ornamen berbentuk tusuk sate di puncaknya. Bangunan ini menggabungkan gaya Indo-Eropa dan elemen lokal, mencerminkan warisan budaya yang kaya.",
+                    history: "Kini, Gedung Sate menjadi kantor Gubernur Jawa Barat sekaligus destinasi wisata sejarah. Pengunjung dapat menikmati arsitektur megahnya dan mengunjungi museum yang menampilkan sejarah serta peran Gedung Sate dalam pemerintahan.",
+                    image: "Bandung.jpg"
+                },
+                "Jakarta": {
+                    title: "Jakarta"
+                    
+                    ,
+                    description: "Monas (Monumen Nasional) adalah landmark ikonik Jakarta yang dibangun pada 1961 sebagai simbol perjuangan kemerdekaan Indonesia. Monumen setinggi 132 meter ini memiliki puncak emas berbentuk lidah api, melambangkan semangat rakyat yang tak pernah padam.",
+                    history: "Selain menjadi destinasi wisata, Monas juga berfungsi sebagai museum sejarah. Pengunjung dapat melihat diorama perjuangan bangsa dan naik ke puncak untuk menikmati pemandangan Jakarta dari ketinggian.",
+                    image: "Jakarta.jpg"
+                }
+            };
+
+            document.querySelectorAll("#city-list a").forEach(item => {
+                item.addEventListener("click", function(event) {
+                    event.preventDefault(); // Mencegah reload halaman
+
+                    let city = this.getAttribute("data-city");
+                    let data = cityData[city];
+
+                    document.getElementById("city-title").innerText = data.title;
+                    document.getElementById("city-description").innerText = data.description;
+                    document.getElementById("city-history").innerText = data.history;
+                    document.getElementById("city-image").src = data.image;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

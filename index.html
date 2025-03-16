@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anggi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: #0d0d0d;
+            color: white;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.85);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #28a745, #00ffcc);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00ffcc;
+        }
+        .cta {
+            background: linear-gradient(45deg, #00ffcc, #28a745);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+        }
+        .cta:hover {
+            background: linear-gradient(45deg, #28a745, #00ffcc);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 1);
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 50px;
+            background: url('bg1.jpg') no-repeat center center/cover;
+        }
+        .content {
+            max-width: 600px;
+        }
+        .content p {
+            font-size: 20px;
+            margin-bottom: 15px;
+            opacity: 0;
+            color: #00ffcc;
+            animation: fadeIn 1s forwards;
+        }
+        .hero h1 {
+            font-size: 55px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+        }
+        .hero h1 span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            background: linear-gradient(45deg, #28a745, #00ffcc);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: fadeSlide 1s forwards;
+        }
+        .hero h1 span:nth-child(1) { animation-delay: 0.3s; }
+        .hero h1 span:nth-child(2) { animation-delay: 0.6s; }
+
+        .profile img {
+            width: 270px;
+            border-radius: 50%;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.6);
+        }
+        .profile img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 255, 204, 1);
+        }
+
+        @keyframes fadeSlide {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Github Pages Landing</div>
+        <a href="https://www.linkedin.com/in/anggilarassati/" class="cta">Let's Connect</a>
+    </header>
+    
+    <section class="hero">
+        <div class="content">
+            <p>🚀 Let's Build Something Amazing Together!</p>
+            <h1>
+                <span>Anggi</span>
+                <span>Larassati</span>
+            </h1>
+            <br><a href="../SIGWeb/Anggi's Projects/M5_493643_Anggi Larassati/index.html" class="cta">View My Projects</a>
+        </div>
+        <div class="profile">
+            <img src="anggi2.png" alt="Anggi Larassati">
+        </div>
+    </section>
+</body>
+</html>
