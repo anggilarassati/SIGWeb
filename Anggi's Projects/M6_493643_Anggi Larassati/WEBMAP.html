@@ -125,9 +125,9 @@
             show: false,
         }).addTo(map) 
     
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{
-        attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>contributors'
-    }).addTo(map); 
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution:'&copy; OpenStreetMap contributors'
+        }).addTo(map); 
 
     var marker =[] 
     marker[0] = L.marker([-7.76388,110.37280],{
