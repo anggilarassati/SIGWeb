@@ -107,7 +107,7 @@
                                 <div class="card-body p-0">
                                     <div class="d-flex align-items-center">
                                         <div class="p-5">
-                                            <h2 class="fw-bolder">Project Week 6</h2>
+                                            <h2 class="fw-bolder">Project Week 7</h2>
                                             <p>• Membuat <i>WebMap</i> Dengan Leaflet<a href="../M7_493643_Anggi Larassati/Rute Leaflet M7.html" class="cta">: Peta Routing Interaktif M7</a>
                                             </p>
                                         </div>
@@ -117,6 +117,266 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- ======= Esai UTS Section ======= -->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Ujian Tengah Semester Tahun 2025</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <style>
+                            table, th, td {border:2px solid black; border-collapse: collapse; padding: 5px;}
+                        </style>
+                        <table align="center">
+                            <tr>
+                                <th>Nama Lengkap</th>
+                                <th>NIM</th>
+                            </tr>
+                            <tr>
+                                <td>Anggi Larassati</td>
+                                <td>22/493643/TK/54089</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="info">
+                        <a href="https://geodesi.ugm.ac.id/" style="color: rgb(19, 54, 249)" > Klik Berikut untuk mengarah ke Website Resmi Teknik Geodesi FT UGM</a>
+                        <p><i>Hal yang dipelajari di mata kuliah</i><b> Praktikum SIG Berbasis Web</b></p>
+                
+                          <h4><b>Minggu Ke-1 dan 2</b></h4>
+                          <p>Pada praktikum Minggu Ke-1 dan Minggu Ke-2 kami melakukan pembuatan website dengan HTML Sederhana
+                            yang berisikan gambar, teks mengarah pada link, serta tulisan berwarna. Selain itu juga dibuat tabel serta form sederhana sesuai modul yang diberikan.
+                            Melakukan pembuatan dengan memperhatikan CSS. Kemudian membuat Curriculum Vitae dengan WIX Studio.
+                          </p>
+                          <h4><b>Minggu Ke-3 dan 4</b></h4>
+                          <p>Praktikum Minggu Ke-3 dan Minggu Ke-4, kami membuat halaman web sederhana dengan berisi 5 soal.
+                            Melakukan program hitungan faktorial dari input yang dimasukkan. Selanjutnya, Validasi Input Password dengan
+                            syarat tertentu. Kemudian Nomor 3 membuat validasi nama dan umur yang diinput. Nomor 4 membuat program perhitungan bilangan prima.
+                            Lalu yang terakhir adalah melakukan program yang sama dengan nomor 4 tetapi untuk bilangan fibonacci.
+                          </p>
+                          <h4><b>Minggu Ke-5</b></h4>
+                          <p>Melakukan pembuatan Curriculum Vitae dengan menggunakan template BootStrap yang diinginkan dan melakukan editing. 
+                            Kemudian membuat akun Github dan melakukan percobaan langkah untuk git clone, serta update kembali pada repository 
+                            github masing-masing.   
+                          </p>
+                          <h4><b>Minggu Ke-6</b></h4>
+                          <p> Pembuatan WebMap sederhana menggunakan Leaflet. Memberikan marker ataupun pop-up 
+                            terkait informasi lokasi yang diinginkan. Saya menggunakan departemen di Fakultas Teknik UGM serta 
+                            lokasi kos saya. Selain itu saya juga menambahkan rute perjalanan yang dapat diubah sesuai dengan keinginan.
+                          </p>
+                          <h4><b>Minggu Ke-7</b></h4>
+                          <p> Pada praktikum minggu terakhir ini, yaitu melakukan lanjutan dari WebMap yang telah dibuat pada minggu sebelumnya. Kemudian menambahkan
+                            beberapa hal lainnya yang mendukung, seperti penambahan opsi basemap yang digunakan. Selain itu juga dilakukan penambahan berupa GEOJSON yang telah disediakan.
+                            Disini saya menggunakan batas administrasi Provinsi DI Yogyakarta dengan warna yang berbeda-beda untuk setiap Kabupatennya.
+                          </p>
+                        </div>
+                        <div style="max-width: 400px; margin: auto; padding: 20px;">
+                            <h4 align="center">Formulir Validasi Pekerjaan</h4>
+                            <p>Masukkan nama dan password</p>
+                        
+                            <label for="nama">Nama:</label>
+                            <input type="text" id="nama" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                        
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" style="width: 100%; padding: 5px; margin-bottom: 10px;">
+                        
+                            <button onclick="checkPassword()" style="width: 100%; padding: 8px;">Submit</button>
+                        
+                            <p id="error" align="center" style="color: red; margin-top: 10px;"></p>
+                        </div>
+                        
+                        <script>
+                            function checkPassword() {
+                                const namaElement = document.getElementById("nama");
+                                const passwordElement = document.getElementById("password");
+                                const errorElement = document.getElementById("error");
+                                const nama = namaElement.value;
+                                const password = passwordElement.value;
+                        
+                                if (password === "" || nama === "") {
+                                    errorElement.textContent = "Nama dan Password Belum Diisi!";
+                                    alert("Nama dan Password Belum Diisi!");
+                                } else if (password === "Selesai") {
+                                    errorElement.textContent = "Password Benar. Terimakasih :)";
+                                    alert("Password Benar. Pekerjaan Selesai :)");
+                                } else {
+                                    errorElement.textContent = "Password salah. Error!";
+                                    alert("Password salah. Error!");
+                                }
+                            }
+                        </script>
+            <!-- ======= Map Section ======= -->
+            <section id="esai" class="esai">
+                <div class="container" data-aos="fade-up">
+        
+            <head>
+                <div class="section-title">
+                <h2><b>Peta 5 Fakultas di UGM</b></h2>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title> Leaflet Web Map M6 </title>
+                <link rel="stylesheet" href="leaflet/leaflet.css"/>
+                <script src="leaflet/leaflet.js"></script>
+                <script src="jogja.js"></script>
+                <link rel = "icon" href = "LOGOUGM.png" 
+                type = "image/x-icon">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+                crossorigin="anonymous">
+                <link rel="stylesheet" href="leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.css" />
+                <script src="leaflet-routing-machine-3.2.12/dist/leaflet-routing-machine.js"></script>
+                <link rel="stylesheet" href="Leaflet.print/dist/leaflet.print.css" />
+                <script src="Leaflet.print/dist/leaflet.print.js"></script>
+                <script src="leaflet.browser.print/dist/leaflet.browser.print.js"></script>
+                <script src="leaflet.browser.print/dist/leaflet.browser.print.min.js"></script>
+                <style>
+                    body {
+                    padding: 0;
+                    margin: 0;
+                    }
+                    .leaflet-popup-content {
+                    max-width: 200px;
+                    height: 100px;
+                    overflow-y: scroll;
+                    }
+                    .site-header {
+                    background-color: #D0E7D2;
+                    width: 100%;
+                    }
+                    .site-header h1 {
+                    margin: 0;
+                    padding: 25px;
+                    }
+                    html, body, #map {
+                    height: 100%;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    }
+                    .navbar-brand {
+                    font-family: 'Courier New'; 
+                    }
+                </style>
+                </head>
+                <body>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
+                    <header class="site-header">
+                        <nav class="navbar navbar-expand-lg  navbar-dark shadow" style="background-color: #c2b3fe">
+                            <div class="container">
+                                <a class="navbar-brand" href="#"></a>
+                                <img src="LOGOUGM.png" alt="Bootstrap" width="30" height="30" /></a>
+                                <a class="navbar-brand data-bs-toggle" style="color: black; font-family: Arial; font-weight: bold;" href="#">Peta Rute Perjalanan Fakultas di UGM</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                                </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                            </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                            <button class="btn btn-outline-success my-2 my-sm-0">My Location </button>
+                            </form>
+                            </div>
+                            </nav>
+                    </header>
+                    <div id="map"></div>
+                    <script>
+                    var map = L.map('map',{
+                        center: [-7.76629,110.37163],
+                        zoom: 17
+                    });
+                    var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+                        maxZoom: 25,
+                        attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>contributors'
+                    }).addTo(map); 
+                    var marker = L.marker([-7.76530,110.37233]).bindPopup('SGLC FT UGM').addTo(map);
+                    var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA,USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',}).addTo(map);
+                    var carto = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', {attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',subdomains: 'abcd',maxZoom: 25
+                    });
+                    var baseMaps = {"Citra Satelit": esri,"Peta Carto": carto,"OpenStreetMap": osm };
+                    var Faperta = L.marker([-7.768613211710683,110.38098341044949],{
+                        title: "Fakultas Pertanian UGM"
+                    }).bindPopup('<h4>Fakultas Pertanian UGM</h4> <p>Fakultas ini menjadi salah satu pionir pendidikan pertanian dan perikanan di Indonesia. Berdiri pada tanggal 27 September 1946, tiga tahun sebelum UGM resmi didirikan.</p> <a href="https://web.faperta.ugm.ac.id/"</a> <img src ="./foto/Faperta.jpg" style="width:150px">'),
+                    FT = L.marker([-7.76530,110.37233],{
+                        title: "Fakultas Teknik UGM"
+                    }).bindPopup('<h4>Fakultas Teknik UGM</h4> <p>Fakultas Teknik menjadi salah satu fakultas awal di UGM pada tahun 1949. Saat ini Fakultas Teknik menempati luas lahan berkisar 10 Hektar yang berlokasi di Jalan Grafika 2 Yogyakarta atau berada di sebelah utara RSUP Prof. Sardjito.</p> <a href="https://ft.ugm.ac.id/"</a> <img src ="./foto/FT.jpg" style="width:150px">'),
+                    FKT = L.marker([-7.766739271150868,110.3809807374357],{
+                        title: "Fakultas Kehutanan UGM"
+                    }).bindPopup('<h4>Fakultas Kehutanan UGM</h4> <p>Fakultas Kehutanan UGM mulai tahun 2010 menjadi fakultas dengan satu program studi yaitu Program Studi Kehutanan (Forestry Study Program). Dalam proses pembelajaran selanjutnya, mahasiswa dapat memfokuskan diri pada bidang keilmuan yang ingin ditekuni melalui 4 minat</p> <a href= "https://fkt.ugm.ac.id/"</a> <img src ="./foto/FKT.jpg" style="width:150px">'),
+                    Fisipol = L.marker([-7.769162983130884,110.38018680332077],{
+                        title: "Fakultas Ilmu Sosial dan Ilmu Politik UGM"
+                    }).bindPopup('<h4>Fakultas Ilmu Sosial dan Ilmu Politik UGM</h4> <p>Fisipol UGM adalah Fakultas Ilmu Sosial dan Ilmu Politik di Universitas Gadjah Mada. Fakultas ini berdiri pada 19 September 1955.</p> <a href="https://fisipol.ugm.ac.id/"</a> <img src ="./foto/Fisipol.jpg" style="width:150px">'),
+                    FMIPA = L.marker([-7.766828533643263,110.37619898255413],{
+                        title: "Fakultas MIPA UGM"
+                    }).bindPopup('<h4>Fakultas MIPA UGM</h4> <p>Fakultas MIPA menyelenggarakan 16 Program Studi yang terdiri dari 8 Program Studi Sarjana, 4 Program Studi Magister, dan 4 Program Studi Doktor.</p> <a href="https://mipa.ugm.ac.id/"</a> <img src ="./foto/FMIPA.jpg" style="width:150px">');
+                    
+                  
+                    var fakultas = L.layerGroup([Faperta, FT, FKT, Fisipol, FMIPA]);
+                    var overlayMaps = {"Fakultas di UGM": fakultas};
+                    L.control.layers(baseMaps, overlayMaps).addTo(map);
+                    L.geoJSON(jogjageojson,{ 
+                        style: function(feature) {
+                            switch (feature.properties.KABUPATEN) {
+                                case 'Gunung Kidul': return {color: "#ff9900"};
+                                case 'Sleman': return {color: "red"};
+                                case 'Bantul': return {color: "blue"};
+                                case 'Yogyakarta': return {color: "green"};
+                                case 'Kulon Progo': return {color: "magenta"};
+                            }
+                        },
+                            onEachFeature: function (feature, layer) {
+                                layer.bindPopup(
+                                    'Kecamatan adalah ' +
+                                    '<strong>' + 
+                                    feature.properties.KECAMATAN +
+                                    '</strong>'
+                                    );
+                        }
+                    }).addTo(map);
+                    var startIcon = L.icon({
+                    iconUrl: 'foto/start.png', 
+                    iconSize:[30,50],
+                    iconAnchor:[12,41]
+                    });
+                    var destinationIcon = L.icon({
+                    iconUrl: 'foto/arrived.png', 
+                    iconSize: [50,30], 
+                    iconAnchor: [12, 41],
+                    });
+                    L.Routing.control({
+                    waypoints: [{
+                        latLng: L.latLng([-7.762907924513235, 110.37354708346328]),
+                        name: "Start"},
+                        {
+                        latLng: L.latLng([-7.76530,110.37233]),
+                        name: "Destination"}],
+                        routeWhileDragging: true,
+                        routeDragTimeout: 250,
+                        lineOptions: {styles: [{ color: 'blue', opacity: 1, weight: 5 }]},
+                            collapsible: true,
+                            show: false,
+                            createMarker: function(i, waypoint, n) 
+                            {if (i === 0 || i === n - 1) {return L.marker(waypoint.latLng, 
+                                {draggable: true,icon: i === 0 ? startIcon : destinationIcon,
+                                title: waypoint.name});} 
+                            else {return L.marker(waypoint.latLng, 
+                                {draggable: true,
+                                title: waypoint.name});}
+                            },
+                            summaryTemplate: '<div class="start-end-summary"><b>{name}</b></div>'
+                            }).addTo(map) 
+                    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{
+                        maxZoom: 25,
+                        attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>contributors'
+                    }).addTo(map);  
+                    var printer = L.control.browserPrint().addTo(map);
+                    printer.on('beforePrint', function () {
+                    printer.printMap('Print', 'A4Portrait');});
+                    document.getElementById("printButton").addEventListener("click", function () {
+                    printer.print();
+                  });
+                  </script>
             </section>
             <!-- Call to action section-->
             <section class="py-5 bg-gradient-primary-to-secondary text-white">
